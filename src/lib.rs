@@ -53,7 +53,7 @@ impl Blake3Hasher {
         self.0.update(b);
       }
       Either3::C(c) => {
-        let mut buffer = Buffer::new();
+        let mut buffer = Buffer::default();
         self.0.update(buffer.format_finite(c).as_bytes());
       }
     }
