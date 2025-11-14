@@ -1,7 +1,7 @@
 #![deny(clippy::all)]
 #![allow(clippy::new_without_default)]
 
-use mimalloc::MiMalloc;
+use mimalloc_safe::MiMalloc;
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 
