@@ -1,10 +1,11 @@
 #![deny(clippy::all)]
 #![allow(clippy::new_without_default)]
 
-use mimalloc_safe::MiMalloc;
+use mimalloc::MiMalloc;
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 
+#[cfg(not(target_family = "wasm"))]
 #[global_allocator]
 static GLOBAL: MiMalloc = MiMalloc;
 
