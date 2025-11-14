@@ -1,7 +1,7 @@
 {
   "name": "@3-/blake3",
   "version": "1.0.9",
-  "description": "blake3 hash use rust & napi-rs",
+  "description": "native & wasm blake3 hash use rust & napi-rs",
   "main": "index.js",
   "repository": {
     "type": "git",
