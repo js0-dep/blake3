@@ -1,12 +1,9 @@
 #![deny(clippy::all)]
 #![allow(clippy::new_without_default)]
 
+use napi::bindgen_prelude::Buffer;
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
-
-#[cfg(not(target_family = "wasm"))]
-#[global_allocator]
-static ALLOC: mimalloc_safe::MiMalloc = mimalloc_safe::MiMalloc;
 
 #[napi]
 #[repr(transparent)]
@@ -56,7 +53,7 @@ impl Blake3Hasher {
         self.0.update(b);
       }
       Either3::C(c) => {
-        let mut buffer = ryu::Buffer::new();
+        let mut buffer = Buffer::new();
         self.0.update(buffer.format_finite(c).as_bytes());
       }
     }
