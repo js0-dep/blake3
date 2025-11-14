@@ -20,5 +20,5 @@ napi-build = "2"
 lto   = true
 strip = "symbols"
 
-[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+[target.'cfg(not(any(target_env = "musl",target_arch = "wasm32")))'.dependencies]
 mimalloc = { version = "0.1.48", features = ["v3"] }
