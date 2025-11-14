@@ -12,6 +12,7 @@ blake3 = "1.8.2"
 mimalloc = "0.1.48"
 napi        = "3.5.2"
 napi-derive = "3.3.3"
+ryu = "1.0.20"
 
 [build-dependencies]
 napi-build = "2"

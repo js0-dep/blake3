@@ -1,1 +1,1 @@
-export * from '@napi-rs/package-template-wasm32-wasi'
+export * from '@3-/blake3-wasm32-wasi'

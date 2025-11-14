@@ -1,7 +1,6 @@
 #![deny(clippy::all)]
 #![allow(clippy::new_without_default)]
 
-use napi::bindgen_prelude::Buffer;
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 
@@ -53,7 +52,7 @@ impl Blake3Hasher {
         self.0.update(b);
       }
       Either3::C(c) => {
-        let mut buffer = Buffer::default();
+        let mut buffer = ryu::Buffer::default();
         self.0.update(buffer.format_finite(c).as_bytes());
       }
     }
