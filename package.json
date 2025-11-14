@@ -1,6 +1,6 @@
 {
   "name": "@3-/blake3",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "blake3 hash use rust & napi-rs",
   "main": "index.js",
   "repository": {
