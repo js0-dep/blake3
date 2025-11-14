@@ -4,10 +4,7 @@
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 
-#[cfg(all(
-  not(target_family = "wasm"),
-  not(target_env = "musl")
-))]
+#[cfg(all(not(target_family = "wasm"), not(target_env = "musl")))]
 #[global_allocator]
 static ALLOC: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
