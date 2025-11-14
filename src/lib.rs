@@ -4,6 +4,10 @@
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
 
+#[cfg(not(target_family = "wasm"))]
+#[global_allocator]
+static ALLOC: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
 #[napi]
 #[repr(transparent)]
 pub struct Blake3Hasher(blake3::Hasher);
