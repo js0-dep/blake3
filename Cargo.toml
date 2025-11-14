@@ -8,7 +8,7 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-blake3      = "1.8.2"
+blake3      = { version = "1.8.2", features = ["pure", "wasm32_simd"] }
 mimalloc    = { version = "0.1.48", features = ["v3"] }
 napi        = "3.5.2"
 napi-derive = "3.3.3"
