@@ -9,7 +9,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 blake3 = "1.8.2"
-mimalloc = "0.1.48"
+mimalloc = { version = "0.1.48", features = ["v3"] }
 napi        = "3.5.2"
 napi-derive = "3.3.3"
 ryu = "1.0.20"
